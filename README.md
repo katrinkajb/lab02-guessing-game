@@ -1,14 +1,14 @@
 # Guess a Number App
 
 ## HTML setup
-1) Number input
+<!-- 1) Number input
     - Why? So user can add their guesses
 2) Button
     - Why? For users to submit their guess and to trigger state changes
 3) span for guesses remaining
     - Why? So users know how many more guesses they have
 4) Too high/too low/Correct span
-    - Why? SO users know where to guess their next number
+    - Why? SO users know where to guess their next number -->
 5) Reset Button (stretch goal)
     - Why? So users can click to start a new game
 
