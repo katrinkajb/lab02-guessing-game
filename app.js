@@ -16,6 +16,7 @@ let guessesRemaining = 4;
 guessButton.addEventListener('click', () =>{
     guessesRemaining--;
     
+// below isn't working for correct guess. Work on this.
     if (numberInput.value === randomNumber.value) {
         guessButton.disable = 'true';
         feedbackArea.textContent = 'Great job!';
