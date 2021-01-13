@@ -19,18 +19,15 @@
         <section class="main-section">
             <img class="image" src="assets/number-guess.png"/>
             <h2>
-                Guess a number between 1 and 20!
+                Guess the Secret Number!
             </h2>
+            <p>Pick a number between 1 and 20 and we'll tell you if the secret number is higher or lower. You will then have 3 more guesses to find the secret number.</p>
             <span id="guesses-remaining-span"></span>
             <input type="number" min="1" max="20" id="number-input">
-            <button id="guess-button" disable = false>Guess</button>
+            <button id="guess-button" disable = 'false'>Guess</button>
             <span id="user-feedback-area"></span>
-        <!-- <div id=hidden-reset>
-                <button>Reset game</button>
-            </div> -->
         </section>
     </main>
     <script type="module" src="app.js"></script>
 </body>
-
 </html>

@@ -1,14 +1,11 @@
 import { randomNumberFunc, guessComparison } from './utils.js'
 
-// import functions and grab DOM elements
 const guessButton = document.getElementById("guess-button");
 const numberInput = document.getElementById("number-input");
 const randomNumber = randomNumberFunc();
 const feedbackArea = document.getElementById("user-feedback-area");
 const guessesRemainingSpan = document.getElementById("guesses-remaining-span");
 
-
-// initialize state
 let guessesRemaining = 4;
     console.log(randomNumber);
     guessesRemainingSpan.textContent = guessesRemaining + ' guesses';
@@ -16,8 +13,7 @@ let guessesRemaining = 4;
 guessButton.addEventListener('click', () =>{
     guessesRemaining--;
     
-// below isn't working for correct guess. Work on this.
-    if (numberInput.value === randomNumber.value) {
+    if (Number(numberInput.value) === randomNumber) {
         guessButton.disable = 'true';
         feedbackArea.textContent = 'Great job!';
     }
