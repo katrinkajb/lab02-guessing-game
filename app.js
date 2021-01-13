@@ -11,24 +11,21 @@ const guessesRemainingSpan = document.getElementById("guesses-remaining-span");
 // initialize state
 let guessesRemaining = 4;
     console.log(randomNumber);
-
+    guessesRemainingSpan.textContent = guessesRemaining + ' guesses';
 
 guessButton.addEventListener('click', () =>{
     guessesRemaining--;
-    feedbackArea.textContent = guessComparison(numberInput.value, randomNumber);
-    console.log(randomNumber);
-    guessesRemainingSpan.textContent = guessesRemaining.value;
-    console.log(guessesRemainingSpan.textContent);
-
-
-// disable input if correct
-//     d) VIEW: check if there are any guesses left. If not:
-//         - Disable input and add losing message
-
-// 5) VIEW: change remaining guesses
-
+    
+    if (numberInput.value === randomNumber.value) {
+        guessButton.disable = 'true';
+        feedbackArea.textContent = 'Great job!';
+    }
+    else if (guessesRemaining <= 0) {
+        guessButton.disable = 'true';
+        feedbackArea.textContent = 'Sorry, you lose';
+    }
+    else {
+        feedbackArea.textContent = guessComparison(numberInput.value, randomNumber);
+        guessesRemainingSpan.textContent = guessesRemaining + ' guesses remaining';
+    }
 })
-
-// guessesRemainingSpan.textContent = guessesRemaining;
-
-// console.log(guessesRemainingSpan);
