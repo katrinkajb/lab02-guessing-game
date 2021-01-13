@@ -8,16 +8,15 @@
 3) span for guesses remaining
     - Why? So users know how many more guesses they have
 4) Too high/too low/Correct span
-    - Why? SO users know where to guess their next number -->
+    - Why? SO users know where to guess their next number
 5) Reset Button (stretch goal)
-    - Why? So users can click to start a new game
+    - Why? So users can click to start a new game -->
 
 ## Steps
 1) Grab DOM elements (with ids)
 2) Initialize state 
     - random number: n   Math.ceil(Math.random() * 20) and round
     - Guesses remaining: 4
-    - no too high/too low text content yet
 3) Add event listener to guess button  
     - on click
         1) STATE: remaining guesses decreases by 1 --
