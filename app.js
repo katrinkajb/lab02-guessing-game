@@ -30,10 +30,11 @@ guessButton.addEventListener('click', () =>{
     }
 })
 
-// resetButton.addEventListener('click', () => {
-//     guessesRemaining = 4;
-//     randomNumberFunc();
-//     guessesRemainingSpan.textContent = guessesRemaining + ' guesses';
-//     guessButton.disabled = 'false';
-//     numberInput.textContent = '';
-// })
+resetButton.addEventListener('click', () => {
+    guessesRemaining = 4;
+    randomNumberFunc();
+    guessesRemainingSpan.textContent = guessesRemaining + ' guesses';
+    guessButton.disabled = false;
+    numberInput.textContent = '';
+    feedbackArea.textContent = '';
+})
