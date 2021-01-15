@@ -37,3 +37,5 @@ resetButton.addEventListener('click', () => {
     numberInput.textContent = '';
     feedbackArea.textContent = '';
 });
+
+// :-)
