@@ -3,13 +3,9 @@ export function randomNumberFunc() {
 }
 
 export function guessComparison(firstNumber, secondNumber) {
-    if (firstNumber > secondNumber) {
-        return "Too high. Guess again." ;
-    }
-    else if (firstNumber < secondNumber) {
-        return "Too low. Guess again." ;
-    }
-    else {
-        return "Correct!";
-    }
+    if (firstNumber > secondNumber) return 'Too high. Guess again.' ;
+    if (firstNumber < secondNumber) return 'Too low. Guess again.' ;
+    return 'Correct!';
+    
 }
+

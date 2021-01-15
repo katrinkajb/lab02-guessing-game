@@ -1,16 +1,15 @@
-import { randomNumberFunc, guessComparison } from './utils.js'
+import { randomNumberFunc, guessComparison } from './utils.js';
 
-const guessButton = document.getElementById("guess-button");
-const numberInput = document.getElementById("number-input");
-const randomNumber = randomNumberFunc();
-const feedbackArea = document.getElementById("user-feedback-area");
-const guessesRemainingSpan = document.getElementById("guesses-remaining-span");
+const guessButton = document.getElementById('guess-button');
+const numberInput = document.getElementById('number-input');
+const feedbackArea = document.getElementById('user-feedback-area');
+const guessesRemainingSpan = document.getElementById('guesses-remaining-span');
 const resetButton = document.getElementById('reset-button');
 
-
+let randomNumber = randomNumberFunc();
 let guessesRemaining = 4;
-    console.log(randomNumber);
-    guessesRemainingSpan.textContent = guessesRemaining + ' guesses';
+
+guessesRemainingSpan.textContent = guessesRemaining + ' guesses';
 
 guessButton.addEventListener('click', () =>{
     guessesRemaining--;
@@ -26,15 +25,15 @@ guessButton.addEventListener('click', () =>{
     }
     else {
         feedbackArea.textContent = guessComparison(numberInput.value, randomNumber);
-        guessesRemainingSpan.textContent = guessesRemaining + ' guesses remaining';
+        guessesRemainingSpan.textContent = `${guessesRemaining} guesses remaining`;
     }
-})
+});
 
 resetButton.addEventListener('click', () => {
     guessesRemaining = 4;
-    randomNumberFunc();
-    guessesRemainingSpan.textContent = guessesRemaining + ' guesses';
+    randomNumber = randomNumberFunc();
+    guessesRemainingSpan.textContent = `${guessesRemaining} guesses remaining`;
     guessButton.disabled = false;
     numberInput.textContent = '';
     feedbackArea.textContent = '';
-})
+});
